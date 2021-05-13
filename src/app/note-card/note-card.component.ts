@@ -23,6 +23,6 @@ export class NoteCardComponent implements OnInit {
     const verification = confirm('Are you sure about that ?');
 
     if (verification)
-      eventDispatcher.next({ type: ActionTypes.DELETE_NOTE, payload: id });
+      eventDispatcher.next({ type: ActionTypes.DELETE_NOTE, payload: { id } });
   }
 }

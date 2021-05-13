@@ -21,6 +21,7 @@ eventDispatcher.subscribe((data: Event) => {
     case ActionTypes.DELETE_NOTE:
       const { notes } = state;
       const id = data.payload['id'];
+      console.log(data);
       const updatedNotes = notes.filter((note: Note) => note.id !== id);
 
       state = {

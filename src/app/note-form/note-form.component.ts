@@ -12,8 +12,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class NoteFormComponent implements OnInit {
   note = new FormGroup({
-    title: new FormControl('teset'),
-    note: new FormControl('testestestets'),
+    title: new FormControl(''),
+    note: new FormControl(''),
   });
 
   constructor() {}
@@ -21,7 +21,6 @@ export class NoteFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log(this.note.value);
     let payload: Note = {
       id: v4(),
       ...this.note.value,
