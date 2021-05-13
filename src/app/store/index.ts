@@ -3,14 +3,13 @@ import { InitialState, Event, Note } from './interfaces';
 import { ActionTypes } from './action';
 
 let state: InitialState = {
-  notes: [],
+  notes: [{ id: 0, title: 'test', note: 'lorem ipsum' }],
 };
 
 export const store = new Subject<InitialState>();
 export const eventDispatcher = new Subject<Event>();
 
 eventDispatcher.subscribe((data: Event) => {
-  console.log('fired');
   switch (data.type) {
     case ActionTypes.CREATE_NOTE:
       state = {

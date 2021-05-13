@@ -1,4 +1,4 @@
-<form class="note-form" [formGroup]="note" (ngSubmit)="(onSubmit)">
+<form class="note-form" [formGroup]="note" (ngSubmit)="onSubmit()">
   <div class="inputs-holder">
     <div class="form-group">
       <input
@@ -20,12 +20,5 @@
       ></textarea>
     </div>
   </div>
-  <button
-    class="submit-button"
-    id="stepper"
-    [disabled]="!note.valid"
-    type="submit"
-  >
-    Submit
-  </button>
+  <button class="submit-button" id="stepper" type="submit">Submit</button>
 </form>
