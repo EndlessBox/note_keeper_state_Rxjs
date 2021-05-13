@@ -1,0 +1,13 @@
+<div class="note-card">
+  <div class="card text-white bg-card mb-3">
+    <div class="card-header">
+      <button (click)="deleteNote(note.id)">
+        <i data-feather="trash-2" id="trash-note"></i>
+      </button>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title note-title">{{ note.title }}</h4>
+      <p class="card-text note-text">{{ note.note }}</p>
+    </div>
+  </div>
+</div>
