@@ -2,8 +2,17 @@ import { Subject } from 'rxjs';
 import { InitialState, Event, Note } from './interfaces';
 import { ActionTypes } from './action';
 
+/*
+ *  Future updates :
+ *    - check if title is already in the store.
+ *    - Add start and finish
+ *    - Hook to back-end
+ *    - Update style.
+ *    - Maybe add WYSIWYG
+ */
+
 let state: InitialState = {
-  notes: [{ id: 0, title: 'test', note: 'lorem ipsum' }],
+  notes: [],
 };
 
 export const store = new Subject<InitialState>();
